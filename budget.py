@@ -31,7 +31,7 @@ class Category:
     def check_funds(self, amount: float) -> bool:
         return amount <= self._funds
 
-    def transfer(self, amount: float, other: Category) -> None:
+    def transfer(self, amount: float, other: Category) -> bool:
         if not self.check_funds(amount):
             return False
 
